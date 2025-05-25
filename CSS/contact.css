@@ -1,0 +1,78 @@
+@media(min-width:860px) {
+    .contactForm {
+        display: block;
+        justify-content: center;
+        padding-top: 60pt;
+    }
+
+    .contactForm h1 {
+        font-family: "Rozha One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25pt;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+        text-align: center;
+        color: rgb(79, 87, 104);
+    }
+
+    .contactForm h2 {
+        font-size: 20pt;
+        text-align: center;
+
+    }
+
+    .contactForm p {
+        font-size: 14pt;
+        text-align: center;
+
+    }
+
+    .contactForm img {
+        width: 500px;
+
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:860px) {
+    .contactForm {
+        display: block;
+        justify-content: center;
+    }
+
+    .contactForm h1 {
+        font-family: "Rozha One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20pt;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+        text-align: center;
+        color: rgb(79, 87, 104);
+    }
+
+    .contactForm h2 {
+        font-size: 14pt;
+        text-align: center;
+
+    }
+
+    .contactForm p {
+        font-size: 12pt;
+        text-align: center;
+
+    }
+
+    .contactForm img {
+        width: 200px;
+
+        display: block;
+        margin: 0 auto;
+    }
+
+
+}

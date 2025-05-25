@@ -1,0 +1,42 @@
+
+@media(min-width:860px) {
+    #terms {
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-top: 100pt;
+    }
+
+    #terms h1 {
+        text-align: center;
+        margin-top: 40pt;
+        color: rgb(79, 87, 104); 
+    }
+
+    #terms p {
+        font-size: 14pt;
+        line-height: 1.5em;
+    }
+}
+
+@media(max-width:860px) {
+    html {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #terms {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #terms h1 {
+        text-align: center;
+        color: rgb(79, 87, 104); 
+    }
+
+    #terms p {
+        font-size: 10pt;
+        line-height: 1.5em;
+    }
+}

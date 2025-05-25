@@ -1,0 +1,99 @@
+@media(min-width:860px) {
+    #HP h1 {
+        font-size: 25pt;
+        margin-bottom: 5px;
+        padding: none;
+        text-align: center;
+        color: white;
+    }
+    
+    #HP p {
+        text-align: center;
+        color: white;
+    }
+    
+    #HP {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: rgb(79, 87, 104);
+        margin-top: 10pt;
+    }
+    
+    #HP .no1 {
+        align-self: center;
+        margin: 60px;
+    }
+    #HP .no1 img {
+        padding: 20px;
+        height: 200px;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    #HP .no2 img {
+        padding: 20px;
+        height: 400px;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    #aboutMe {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: rgb(79, 87, 104);
+        margin-top: 30pt;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    #aboutMe .no3 img {
+        padding: 8px;
+        height: 300px;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    #aboutMe .no4 {
+        align-self: center;
+        margin: 25px;
+    
+    }
+    
+    #aboutMe p {
+        color: white;
+        text-align: left;
+    }
+    
+    #aboutMe #book #GD {
+        align-self: center;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 12pt;
+        text-decoration: none;
+    }
+    
+    #aboutMe p {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 12pt;
+        line-height: 1.5em;
+    }
+    
+    #aboutMe h2 {
+        font-family: "Slabo 13px", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        font-size: 18pt;
+    }
+    }

@@ -1,0 +1,303 @@
+@media(min-width:860px){
+    .title{
+        font-size: 22pt;
+        text-align: center;
+        font-family: "Rozha One", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(79, 87, 104); 
+        margin-top: 50px
+    }
+    
+        #shop div {
+            flex: 1 1 35%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+        }
+    
+        #shop {
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+    
+        #shop h2 {
+            text-align: center;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14pt;
+           margin-bottom: 50px;
+    
+        }
+    
+        #shop img {
+            width: 100%; 
+            height: auto; 
+            max-width: 560px; 
+            margin-bottom: 10px; 
+        }
+    
+        #find {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: rgb(79, 87, 104);
+            margin-top: 10pt;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #find h2{
+            font-family: "Rozha One", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 24pt;
+        }
+
+        #find .Find1 {
+            align-self: center;
+            margin: 0px;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            color: white;
+            line-height: 1.5em;
+        }
+    
+        #find .Find2 img {
+            margin-left: 130px;
+            padding: 8px;
+            height: 400px;
+            width: auto;
+            max-width: 100%;
+        }
+
+        .title{
+            text-align: center;
+            font-family: "Rozha One", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: rgb(79, 87, 104); 
+            margin-top: 20px
+        }
+    
+        #look-for {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            margin-top: 30px;
+            font-size: 14pt;
+        }
+     
+        #shop a {
+            text-decoration: none;
+            color: rgb(79, 87, 104);
+        }
+
+        #shop a:hover {
+            color:rgb(185, 180, 180); 
+            transform: scale(1.0); 
+        }
+    
+        #prices {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #prices table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            font-family: "Raleway", sans-serif;
+            font-weight: 200;
+        }
+           
+        #prices th {
+            font-weight: 400;
+            background-color:rgb(79, 87, 104);
+            color: white;
+            font-size: 16pt;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        #prices td {
+            font-size: 13pt;
+            color: rgb(79, 94, 125);
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgb(153, 154, 156);
+        }
+        #prices p {
+            font-size: 8pt;
+        }
+    
+    }
+    
+    
+    @media(max-width:860px){
+    
+        html {
+            max-width: 350px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .title{
+            font-size: 16pt;
+            text-align: center;
+            font-family: "Rozha One", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: rgb(79, 87, 104); 
+            margin-top: 20px
+        }
+    
+    
+        #shop {
+            display: flex;
+            flex-direction: row; 
+            justify-content: space-around; 
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+    
+        #shop div {
+            flex: 1 1 35%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+        }
+    
+        #shop img {
+            width: 100%; 
+            height: auto; 
+            max-width: 150px; 
+            margin-bottom: 10px; 
+        }
+    
+        #shop h2 {
+            font-weight: 400;
+            font-size: 10pt;
+            margin-bottom: 25px;
+            text-align: center; 
+        }
+    
+       #find {
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           align-items: center;
+           flex-wrap: wrap;
+           background-color: rgb(79, 87, 104);
+           margin-top: 20pt;
+           padding-top: 10px;
+           padding-bottom: 10px;
+         
+       }
+    
+       #find .Find1 {
+           align-self: center;
+           margin: 10px;
+           font-family: "Raleway", sans-serif;
+           font-optical-sizing: auto;
+           font-weight: 300;
+           font-style: normal;
+           color: white;
+           line-height: 1.4em;
+    
+       }
+    
+       #find .Find2 img {
+           margin-left: 0px;
+           padding: 8px;
+           height: 200px;
+           width: auto;
+           max-width: 100%;
+           border-radius: 4px;
+       }
+    
+       #look-for {
+           font-family: "Raleway", sans-serif;
+           font-optical-sizing: auto;
+           font-weight: 300;
+           font-style: normal;
+           margin-top: 60px;
+           font-size: 12pt;
+           border-radius: 4px;
+       }
+    
+       #shop a {
+           text-decoration: none;
+           color: rgb(79, 87, 104);
+           
+       }
+       #shop a:hover {
+           color:rgb(185, 180, 180); 
+           transform: scale(1.5); 
+       }
+    
+    
+       #prices {
+           margin: 30px auto;
+           display: flex;
+           justify-content: center;
+       }
+       
+       
+       #prices table {
+           margin-top: 30px;
+           width: 100%;
+           border-collapse: collapse;
+           font-family: "Raleway", sans-serif;
+           font-weight: 200;
+           
+       }
+          
+       #prices th {
+           font-weight: 400;
+           background-color:rgb(79, 87, 104);
+           color: white;
+           font-size: 12pt;
+    
+           padding: 14px;
+           text-align: left;
+       }
+       
+       #prices td {
+           font-size: 9pt;
+           color: rgb(79, 94, 125);
+    
+           padding: 12px;
+           text-align: left;
+           border-bottom: 1px solid rgb(153, 154, 156);
+       }
+    
+       #prices p {
+        font-size: 8pt;
+    }
+    
+    .Find1 h2{
+        font-size: 18pt;
+        text-align: center;
+        font-family: "Rozha One", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(255, 255, 255); 
+        margin-top: 50px
+    }
+       
+    }
