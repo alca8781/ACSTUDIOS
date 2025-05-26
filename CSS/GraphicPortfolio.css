@@ -1,0 +1,55 @@
+@media(min-width:860px) {
+
+    h2 {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 14pt;
+        line-height: 1.5em;
+        background-color: rgb(79, 87, 104);
+        color: white;
+        padding: 15px 15px 15px 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+  article {
+        text-align: center;
+    }
+    .longBanner {
+        background-color: #e4e4e4;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .longBanner img {
+        width: 1000px;
+    }
+
+    .smallBanners {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        background-color: #e4e4e4;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #img1 img {
+        width: 300px;
+        margin-left: -80px;
+    }
+
+    #img2 img {
+        width: 600px;
+        margin-left: -220px;
+    }
+
+
+}
+
+
+@media(max-width:860px) {}
