@@ -1,0 +1,17 @@
+h1{
+    color: rgb(79, 87, 104);
+    font-size: 25pt;
+}
+h3{
+font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+  color: rgb(79, 87, 104);
+
+}
+
+a img:hover{
+  transform: scale(1.1);
+}
+
