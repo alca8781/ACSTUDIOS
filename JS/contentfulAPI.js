@@ -154,4 +154,4 @@ const client = contentful.createClient({
   DisplayImages('Weppler_content', 'weppler');
   DisplayImages('Larson_content', 'larsonFamily');
   DisplayImages('Kelly_content', 'Kelly')
-  
+   DisplayImages('Nalven_content', 'nalven')
