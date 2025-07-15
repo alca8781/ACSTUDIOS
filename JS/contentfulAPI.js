@@ -31,26 +31,64 @@ function saveCartToLocalStorage() {
 viewCartButton.addEventListener('click', () => {
   isCartVisible = !isCartVisible;
 
+  cartListDisplay.innerHTML = '';
+
   if (isCartVisible) {
-    cartListDisplay.innerHTML = '';
     if (cartItems.length > 0) {
-      cartListDisplay.innerHTML = '<h3>Cart Items:</h3>';
+      const heading = document.createElement('h3');
+      heading.textContent = 'Cart Items:';
+      cartListDisplay.appendChild(heading);
+
+      const instructions = document.createElement('p');
+      instructions.innerHTML = `Copy & paste cart selections<br> and email:<br>ac@allycadyphotography.com<br>---------------------------------`;
+      cartListDisplay.appendChild(instructions);
+
       const list = document.createElement('ul');
       cartItems.forEach(itemName => {
         const listItem = document.createElement('li');
         listItem.textContent = itemName;
         list.appendChild(listItem);
-        cartListDisplay.innerHTML = '<p> copy & paste cart selections <br> and email <br> ac@allycadyphotography.com <br> ---------------------------------</p>';
-
       });
       cartListDisplay.appendChild(list);
+
+      const buttonWrapper = document.createElement('div');
+      buttonWrapper.style.textAlign = 'center';
+      buttonWrapper.style.marginTop = '10px';
+      buttonWrapper.style.scrollMarginLeft = '300px';
+
+      const copyButton = document.createElement('button');
+      copyButton.textContent = 'Copy';
+      copyButton.style.padding = '8px 26px';
+      copyButton.style.fontSize = '12px';
+      copyButton.style.cursor = 'pointer';
+      copyButton.style.border = '1px solid #888';
+      copyButton.style.backgroundColor = '#eee';
+      copyButton.style.borderRadius = '4px';
+      copyButton.style.marginLeft = '80px';
+
+
+      buttonWrapper.appendChild(copyButton);
+      cartListDisplay.appendChild(buttonWrapper);
+
+      copyButton.addEventListener('click', () => {
+        const listText = cartItems.join('\n');
+        navigator.clipboard.writeText(listText)
+          .then(() => {
+            alert('Cart items copied to clipboard.');
+          })
+          .catch(err => {
+            alert('Failed to copy cart items.');
+            console.error(err);
+          });
+      });
+
+      cartListDisplay.appendChild(copyButton);
     } else {
-      cartListDisplay.innerHTML = '<p> cart is empty.</p>';
+      cartListDisplay.innerHTML = '<p>Cart is empty.</p>';
     }
-  } else {
-    cartListDisplay.innerHTML = '';
   }
 });
+
 
 
 // IMAGES 
@@ -78,25 +116,6 @@ const ImageName = (container, imageAsset, name) => {
   const img = document.createElement('img');
   img.src = 'https:' + imageAsset.fields.file.url;
   img.style.width = '320px';
-
-
-  // img.style.transition = 'transform 0.3s ease, z-index 0.3s ease';
-  // img.style.cursor = 'pointer';
-  // img.style.zIndex = '1';
-  // img.style.position = 'relative';
-
-  // // Make image zoom significantly on hover
-  // img.addEventListener('mouseover', () => {
-  //   img.style.transform = 'scale(1.8)';
-  //   img.style.zIndex = '10'; // bring to front
-  //   img.style.filter = 'opacity(100%)';
-  // });
-
-  // img.addEventListener('mouseleave', () => {
-  //   img.style.transform = 'scale(1)';
-  //   img.style.zIndex = '1';
-  // });
-
 
 
   // Check if item is already in cart (saved from localStorage) and apply opacity
