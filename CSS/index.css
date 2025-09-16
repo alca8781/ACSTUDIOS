@@ -1,4 +1,4 @@
-@media(min-width:860px) {
+@media(min-width:1201px) {
   html {
       max-width: 1200px;
       height: 100%;
@@ -155,7 +155,7 @@ li.dropdown:hover .dropdown-content {
   
 }
 
-@media(max-width:860px) {
+@media(max-width:1200px) {
     html {
         max-width: 350px;
         /* width: 90%; */

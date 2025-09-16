@@ -1,4 +1,4 @@
-@media(min-width:860px) {
+@media(min-width:1300px) {
     #HP h1 {
         font-size: 25pt;
         margin-bottom: 5px;
@@ -98,7 +98,7 @@
     }
     }
 
-    @media(max-width:860px) {
+    @media(max-width:1300px) {
 
         #HP h1 {
             font-size: 25pt;
