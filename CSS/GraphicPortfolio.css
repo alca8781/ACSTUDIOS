@@ -128,7 +128,7 @@ h2 {
         background-color: rgb(79, 87, 104);
         color: white;
         padding: 15px 15px 15px 30px;
-        margin-top: 50px;
+        margin-top: 20px;
         margin-bottom: 30px;
     }
 
@@ -148,15 +148,19 @@ h2 {
 
     article {
         text-align: center;
+        
     }
 
     #TileContainer {
         margin-bottom: 100px;
     }
 
+    .SquareTile{
+        margin-bottom: 40px;
+    }
     .SquareTile p {
         margin-top: 1px;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
 
     }
 

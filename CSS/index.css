@@ -147,7 +147,12 @@ li.dropdown:hover .dropdown-content {
       font-weight: 300;
   }
   
-
+  button{
+    padding: 8px 8px 8px 8px;
+    border-radius: 8px;
+    
+  }
+  
 }
 
 @media(max-width:860px) {
@@ -298,6 +303,21 @@ li.dropdown:hover .dropdown-content {
         font-weight: 300;
     }
     
+   .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.button-row button {
+    flex: 1 1 auto;
+    font-size: 8pt;
+    padding: 6px;
+    min-width: 160px;
+    max-width: 10px;
+}
   
   }
   
