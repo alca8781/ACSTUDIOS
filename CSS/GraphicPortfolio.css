@@ -1,4 +1,4 @@
-@media(min-width:860px) {
+@media(min-width:1201px) {
 
     h2 {
         font-family: "Raleway", sans-serif;
@@ -14,42 +14,160 @@
         margin-bottom: 30px;
     }
 
-  article {
+    h3 {
+        font-size: 14pt;
+        margin-top: -5px;
+        font-family: "Raleway", sans-serif;
+
+    }
+
+    h4 {
+        font-size: 9pt;
+        margin-top: -15px;
+        font-family: "Raleway", sans-serif;
+
+    }
+
+    article {
         text-align: center;
     }
-    .longBanner {
-        background-color: #e4e4e4;
-        padding: 10px;
-        margin: 10px;
-    }
 
-    .longBanner img {
-        width: 1000px;
-    }
-
-    .smallBanners {
+    #TileContainer {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        background-color: #e4e4e4;
-        padding: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 10px;
+    }
+
+    .SquareTile p {
+        margin-top: 1px;
+        margin-bottom: 40px;
+
+    }
+
+    .SquareTile img {
+        height: 350px;
+        /* border: black solid 2px; */
+
+        border-radius: 4px;
+        gap: 2px;
         margin: 10px;
     }
 
-    #img1 img {
-        width: 300px;
-        margin-left: -80px;
+    .SquareTile:hover {
+        transform: scale(1.05);
     }
-
-    #img2 img {
-        width: 600px;
-        margin-left: -220px;
-    }
-
 
 }
 
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+h2 {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 14pt;
+        line-height: 1.5em;
+        background-color: rgb(79, 87, 104);
+        color: white;
+        padding: 15px 15px 15px 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
 
-@media(max-width:860px) {}
+    h3 {
+        font-size: 14pt;
+        margin-top: -5px;
+        font-family: "Raleway", sans-serif;
+
+    }
+
+    h4 {
+        font-size: 9pt;
+        margin-top: -15px;
+        font-family: "Raleway", sans-serif;
+
+    }
+
+    article {
+        text-align: center;
+    }
+
+    #TileContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 10px;
+    }
+
+    .SquareTile p {
+        margin-top: 1px;
+        margin-bottom: 40px;
+
+    }
+
+    .SquareTile img {
+        height: 350px;
+        /* border: black solid 2px; */
+
+        border-radius: 4px;
+        gap: 2px;
+        margin: 10px;
+    }
+
+    .SquareTile:hover {
+        transform: scale(1.05);
+    }
+}
+@media(max-width:800px) {
+        h2 {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 14pt;
+        line-height: 1.5em;
+        background-color: rgb(79, 87, 104);
+        color: white;
+        padding: 15px 15px 15px 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 12pt;
+        margin-top: -5px;
+        font-family: "Raleway", sans-serif;
+
+    }
+
+    h4 {
+        font-size: 8pt;
+        margin-top: -15px;
+        font-family: "Raleway", sans-serif;
+
+    }
+
+    article {
+        text-align: center;
+    }
+
+    #TileContainer {
+        margin-bottom: 100px;
+    }
+
+    .SquareTile p {
+        margin-top: 1px;
+        margin-bottom: 40px;
+
+    }
+
+    .SquareTile img {
+        height: 300px;
+        border-radius: 4px;
+
+       
+    }
+
+    .SquareTile:hover {
+        transform: scale(1.05);
+    }
+}
