@@ -1,8 +1,164 @@
-@media(min-width:1201px) {
-.centerImages p{
-    text-align: center;
-    padding: 15px;
-}
+@media(min-width:1300px) {
+    html {
+        max-width: 1200px;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .headerLogo img {
+        width: 200px;
+    }
+
+    .sr-only {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+
+    nav {
+        padding: .5em;
+        display: flex;
+        justify-content: space-evenly;
+        position: sticky;
+        top: 0;
+        background-color: white;
+
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    nav a {
+        color: rgb(79, 94, 125);
+        text-decoration: none;
+        padding: .2em .5em;
+        margin: 0 20pt;
+        text-align: left;
+    }
+
+    a {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        padding: 10px;
+        font-size: 15pt;
+        line-height: 1.5em;
+    }
+
+    nav ul li a:hover {
+        color: #6d8291;
+        border-bottom: 2px solid rgb(79, 94, 125);
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #b1b1b3;
+        min-width: 260px;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    li.dropdown {
+        position: relative;
+    }
+
+    li.dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        font-size: 12pt;
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        color: rgb(79, 94, 125);
+        border-bottom: none;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+    }
+
+    #instagram-button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #instagram-logo {
+        width: 30px;
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+    #instagram-button:hover #instagram-logo {
+        transform: scale(1.1);
+    }
+
+    footer {
+        font-size: x-small;
+        text-align: center;
+        color: rgb(79, 87, 104);
+        padding: 10px;
+        background-color: white;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-family: "Rozha One", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+    }
+
+    button {
+        padding: 8px 8px 8px 8px;
+        border-radius: 8px;
+
+    }
+
+    .centerImages p {
+        text-align: center;
+        padding: 15px;
+    }
+
     h2 {
         font-family: "Raleway", sans-serif;
         font-optical-sizing: auto;
@@ -78,12 +234,175 @@
 
 }
 
+@media (min-width: 800px) and (max-width: 1299px) {
+    html {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 
-@media only screen and (max-width: 1200px)  {
-.centerImages p{
-    text-align: center;
-    padding: 15px;
-}
+    .headerLogo img {
+        width: 100px;
+    }
+
+    .sr-only {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+
+    nav {
+        padding: .2em;
+        display: flex;
+        justify-content: space-evenly;
+        position: sticky;
+        top: 0;
+        background-color: white;
+
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    nav a {
+        color: rgb(79, 94, 125);
+        text-decoration: none;
+        /* padding: .2em .5em; */
+        margin: 0 2pt;
+        text-align: left;
+    }
+
+    a {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        padding: 8px;
+        font-size: 12pt;
+        line-height: 1.5em;
+    }
+
+    nav ul li a:hover {
+        color: #acacac;
+        /* border-bottom: 2px solid rgb(79, 94, 125);
+         */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #b1b1b3;
+        min-width: 160px;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+        padding: 2px;
+        border-radius: 10px;
+    }
+
+    li.dropdown {
+        position: relative;
+    }
+
+    li.dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        font-size: 8pt;
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        color: rgb(79, 94, 125);
+        border-bottom: none;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+
+    }
+
+    #instagram-button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #instagram-logo {
+        width: 30px;
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+    #instagram-button:hover #instagram-logo {
+        transform: scale(1.1);
+    }
+
+    footer {
+        font-size: x-small;
+        text-align: center;
+        color: rgb(79, 87, 104);
+        padding: 10px;
+        background-color: white;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-family: "Rozha One", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+    }
+
+    .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .button-row button {
+        flex: 1 1 auto;
+        font-size: 8pt;
+        padding: 6px;
+        min-width: 160px;
+        max-width: 10px;
+    }
+
+    .centerImages p {
+        text-align: center;
+        padding: 15px;
+    }
+
     h2 {
         font-family: "Raleway", sans-serif;
         font-optical-sizing: auto;
@@ -106,7 +425,280 @@
 
     .displayPortfolio {
 
-       padding: 10px;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        padding: 30px;
+    }
+
+    .displayPortfolio p {
+        margin: 10px;
+        font-size: 11pt;
+    }
+
+    article img {
+        height: 550px;
+    }
+
+    article p img {
+        width: 100%;
+        height: auto;
+        padding-top: 25px;
+    }
+
+    button {
+        background-color: #fbb831;
+        color: rgb(0, 0, 0);
+        padding: 2px 10px 2px 10px;
+        margin: 15px 10px 15px 10px;
+        border-radius: 8px;
+        font-size: 12pt;
+    }
+
+    .centerImg img {
+        display: block;
+        margin: auto;
+        width: 80%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .centerImages img {
+        display: block;
+        margin: auto;
+        width: auto;
+        height: 60%;
+        padding: 10px;
+    }
+
+    .centerImg button {
+        display: block;
+        margin: auto;
+        width: 8%;
+        height: auto;
+        padding: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 799px) {
+       html {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .headerLogo img {
+        width: 100px;
+    }
+
+    .sr-only {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+
+    nav {
+        padding: .2em;
+        display: flex;
+        justify-content: space-evenly;
+        position: sticky;
+        top: 0;
+        background-color: white;
+
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    nav a {
+        color: rgb(79, 94, 125);
+        text-decoration: none;
+        /* padding: .2em .5em; */
+        margin: 0 2pt;
+        text-align: left;
+    }
+
+    a {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        padding: 8px;
+        font-size: 12pt;
+        line-height: 1.5em;
+    }
+
+    nav ul li a:hover {
+        color: #acacac;
+        /* border-bottom: 2px solid rgb(79, 94, 125);
+         */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #b1b1b3;
+        min-width: 160px;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+        padding: 2px;
+        border-radius: 10px;
+    }
+
+    li.dropdown {
+        position: relative;
+    }
+
+    li.dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        font-size: 8pt;
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        color: rgb(79, 94, 125);
+        border-bottom: none;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+
+    }
+
+    #instagram-button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #instagram-logo {
+        width: 30px;
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+    #instagram-button:hover #instagram-logo {
+        transform: scale(1.1);
+    }
+
+    footer {
+        font-size: x-small;
+        text-align: center;
+        color: rgb(79, 87, 104);
+        padding: 10px;
+        background-color: white;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-family: "Rozha One", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+    }
+
+    .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .button-row button {
+        flex: 1 1 auto;
+        font-size: 8pt;
+        padding: 6px;
+        min-width: 160px;
+        max-width: 10px;
+    }
+
+    .centerImages p {
+        text-align: center;
+        padding: 15px;
+    }
+
+    h2 {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 14pt;
+        line-height: 1.5em;
+        background-color: rgb(79, 87, 104);
+        color: white;
+        padding: 15px 15px 15px 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+
+    article {
+        background-color: rgb(231, 229, 229);
+        margin: 20px;
+    }
+     .centerImages p {
+        text-align: center;
+        padding: 15px;
+    }
+
+    h2 {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 14pt;
+        line-height: 1.5em;
+        background-color: rgb(79, 87, 104);
+        color: white;
+        padding: 15px 15px 15px 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+
+    article {
+        background-color: rgb(231, 229, 229);
+        margin: 20px;
+    }
+
+    .displayPortfolio {
+
+        padding: 10px;
 
     }
 

@@ -1,177 +1,285 @@
-@media(min-width:1201px) {
+/* ---------- Base Styles ---------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(79, 94, 125);
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ---------- Header Logo ---------- */
+.headerLogo img {
+    width: 100px;
+}
+
+@media (min-width: 1300px) {
+    .headerLogo img {
+        width: 200px;
+    }
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: rgb(79, 94, 125);
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    margin: 0 10pt;
+    font-size: 15pt;
+    line-height: 1.5em;
+}
+
+nav ul li a:hover {
+    color: #6d8291;
+    border-bottom: 2px solid rgb(79, 94, 125);
+}
+
+/* ---------- Dropdown Menu ---------- */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #b1b1b3;
+    min-width: 200px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+li.dropdown {
+    position: relative;
+}
+
+li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    font-size: 12pt;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+}
+
+.dropdown-content a:hover {
+    color: rgb(79, 94, 125);
+    border-bottom: none;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 14pt;
+    line-height: 1.5em;
+    background-color: rgb(79, 87, 104);
+    color: white;
+    padding: 15px 15px 15px 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 14pt;
+    margin-top: -5px;
+}
+
+h4 {
+    font-size: 9pt;
+    margin-top: -15px;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+a {
+    padding: 10px;
+}
+
+/* ---------- Screen Reader Only ---------- */
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* ---------- Tile Container ---------- */
+#TileContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+    margin-bottom: 40px;
+}    
+
+.SquareTile {
+    text-align: center;
+    
+}
+
+.SquareTile img {
+    width: 100%;
+    max-height: 350px;
+   
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.SquareTile:hover {
+    transform: scale(1.05);
+}
+
+.SquareTile p {
+    margin-top: 1px;
+    margin-bottom: 40px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    font-size: x-small;
+    text-align: center;
+    color: rgb(79, 87, 104);
+    padding: 10px;
+    background-color: white;
+    margin-top: auto;
+    width: 100%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#instagram-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#instagram-logo {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#instagram-button:hover #instagram-logo {
+    transform: scale(1.1);
+}
+
+/* ---------- Article Content ---------- */
+article {
+    text-align: center;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 12pt;
+        margin: 5px;
+    }
+
+    .headerLogo img {
+        width: 100px;
+    }
+
+    .dropdown-content {
+        min-width: 160px;
+        padding: 5px;
+    }
+
+    .dropdown-content a {
+        font-size: 10pt;
+    }
 
     h2 {
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 14pt;
-        line-height: 1.5em;
-        background-color: rgb(79, 87, 104);
-        color: white;
-        padding: 15px 15px 15px 30px;
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    h3 {
-        font-size: 14pt;
-        margin-top: -5px;
-        font-family: "Raleway", sans-serif;
-
-    }
-
-    h4 {
-        font-size: 9pt;
-        margin-top: -15px;
-        font-family: "Raleway", sans-serif;
-
-    }
-
-    article {
-        text-align: center;
-    }
-
-    #TileContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-bottom: 10px;
-    }
-
-    .SquareTile p {
-        margin-top: 1px;
-        margin-bottom: 40px;
-
-    }
-
-    .SquareTile img {
-        height: 350px;
-        /* border: black solid 2px; */
-
-        border-radius: 4px;
-        gap: 2px;
-        margin: 10px;
-    }
-
-    .SquareTile:hover {
-        transform: scale(1.05);
-    }
-
-}
-
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
-h2 {
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 14pt;
-        line-height: 1.5em;
-        background-color: rgb(79, 87, 104);
-        color: white;
-        padding: 15px 15px 15px 30px;
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    h3 {
-        font-size: 14pt;
-        margin-top: -5px;
-        font-family: "Raleway", sans-serif;
-
-    }
-
-    h4 {
-        font-size: 9pt;
-        margin-top: -15px;
-        font-family: "Raleway", sans-serif;
-
-    }
-
-    article {
-        text-align: center;
-    }
-
-    #TileContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 10px;
-    }
-
-    .SquareTile p {
-        margin-top: 1px;
-        margin-bottom: 40px;
-
-    }
-
-    .SquareTile img {
-        height: 350px;
-        /* border: black solid 2px; */
-
-        border-radius: 4px;
-        gap: 2px;
-        margin: 10px;
-    }
-
-    .SquareTile:hover {
-        transform: scale(1.05);
-    }
-}
-@media(max-width:800px) {
-        h2 {
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 14pt;
-        line-height: 1.5em;
-        background-color: rgb(79, 87, 104);
-        color: white;
-        padding: 15px 15px 15px 30px;
         margin-top: 20px;
-        margin-bottom: 30px;
+        padding: 10px;
     }
 
     h3 {
         font-size: 12pt;
-        margin-top: -5px;
-        font-family: "Raleway", sans-serif;
-
     }
 
     h4 {
         font-size: 8pt;
-        margin-top: -15px;
-        font-family: "Raleway", sans-serif;
-
-    }
-
-    article {
-        text-align: center;
-        
-    }
-
-    #TileContainer {
-        margin-bottom: 100px;
-    }
-
-    .SquareTile{
-        margin-bottom: 40px;
-    }
-    .SquareTile p {
-        margin-top: 1px;
-        margin-bottom: 60px;
-
     }
 
     .SquareTile img {
-        height: 300px;
-        border-radius: 4px;
-
-       
+        max-height: 280px;
     }
 
-    .SquareTile:hover {
-        transform: scale(1.05);
+    .social {
+        padding: 8px;
+    }
+
+    .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .button-row button {
+        flex: 1 1 auto;
+        font-size: 8pt;
+        padding: 6px;
+        min-width: 160px;
     }
 }
+
