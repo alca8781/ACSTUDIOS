@@ -259,6 +259,7 @@ article {
 
     nav a {
         margin: 0 2pt;
+        font-size: 14px;
     }
 
     .dropdown-content {
