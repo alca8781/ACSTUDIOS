@@ -26,7 +26,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-  
       z-index: 1000;
     }
   
@@ -35,7 +34,7 @@
       align-items: center;
       justify-content: center;
       background-color: white;
-  
+      margin-top: 5px;
       border: none;
     }
   
@@ -44,7 +43,6 @@
       background-color: rgb(79, 87, 104);
       border-radius: 4px;
       padding: 4px;
-      /* margin-top: 10px; */
     }
   
   
@@ -62,10 +60,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-  
       background-color: white;
       border: none;
-  
     }
   
     #cartCountContainer {
@@ -73,11 +69,8 @@
       align-items: center;
       justify-content: center;
       background-color: white;
-  
       padding: 5px 10px;
-  
       font-size: 14px;
-  
     }
   
     #cartListContainer h3 {
@@ -109,22 +102,16 @@
       height: 35px;
     }
   
-   
-  
     #resetCartButton {
-  
       border: 2px solid #becae2;
       background-color: #becae2;
-  
       border-radius: 4px;
       font-family: "Raleway", sans-serif;
       font-optical-sizing: auto;
       font-weight: 500;
       text-decoration: none;
       font-size: 8pt;
-  
       margin-top: 10px;
-      
       margin-right: 150px;
       position: fixed;
       top: 0;
@@ -132,16 +119,13 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-  
       z-index: 1000;
+      padding:4px;
     }
   
     #resetCartButton:active {
       background-color: #c66666;
-      
     }
-
-
   
   }
   
@@ -261,7 +245,7 @@
       font-size: 8pt;
   
       margin-top: 20px;
-      
+  
       margin-right: 0px;
       position: fixed;
       top: 0;
@@ -277,7 +261,4 @@
       background-color: #c66666;
       
     }
-
- 
-  
   }

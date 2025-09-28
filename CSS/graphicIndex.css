@@ -7,7 +7,9 @@
     }
 
     .headerLogo img {
-        width: 200px;
+        width: 300px;
+        text-align: center;
+        align-items: center;
     }
 
     .sr-only {

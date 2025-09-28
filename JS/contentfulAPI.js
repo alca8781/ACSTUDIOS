@@ -30,7 +30,6 @@ function saveCartToLocalStorage() {
 // Cart display on click
 viewCartButton.addEventListener('click', () => {
   isCartVisible = !isCartVisible;
-
   cartListDisplay.innerHTML = '';
 
   if (isCartVisible) {
@@ -52,9 +51,9 @@ viewCartButton.addEventListener('click', () => {
       cartListDisplay.appendChild(list);
 
       const buttonWrapper = document.createElement('div');
-      buttonWrapper.style.textAlign = 'center';
-      buttonWrapper.style.marginTop = '10px';
-      buttonWrapper.style.scrollMarginLeft = '300px';
+      buttonWrapper.style.display = 'flex';
+      buttonWrapper.style.justifyContent = 'center';
+      buttonWrapper.style.marginTop = '15px';
 
       const copyButton = document.createElement('button');
       copyButton.textContent = 'Copy';
@@ -64,34 +63,27 @@ viewCartButton.addEventListener('click', () => {
       copyButton.style.border = '1px solid #888';
       copyButton.style.backgroundColor = '#eee';
       copyButton.style.borderRadius = '4px';
-      copyButton.style.marginLeft = '80px';
-
-
-      buttonWrapper.appendChild(copyButton);
-      cartListDisplay.appendChild(buttonWrapper);
 
       copyButton.addEventListener('click', () => {
         const listText = cartItems.join('\n');
         navigator.clipboard.writeText(listText)
-          .then(() => {
-            alert('Cart items copied to clipboard.');
-          })
+          .then(() => alert('Cart items copied to clipboard.'))
           .catch(err => {
             alert('Failed to copy cart items.');
             console.error(err);
           });
       });
 
-      cartListDisplay.appendChild(copyButton);
+      buttonWrapper.appendChild(copyButton);
+      cartListDisplay.appendChild(buttonWrapper);
+
     } else {
       cartListDisplay.innerHTML = '<p>Cart is empty.</p>';
     }
   }
 });
 
-
-
-// IMAGES 
+// Display Images from Contentful
 const DisplayImages = (containerId, fieldKey) => {
   const container = document.getElementById(containerId);
 
@@ -107,54 +99,79 @@ const DisplayImages = (containerId, fieldKey) => {
   });
 };
 
-// Display image with name 
+// Display image with hover buttons
 const ImageName = (container, imageAsset, name) => {
   const imgContainer = document.createElement('div');
+  imgContainer.style.position = 'relative';
   imgContainer.style.display = 'inline-block';
-  imgContainer.style.margin = '5px';
+  imgContainer.style.margin = '10px';
+  imgContainer.style.overflow = 'hidden';
 
   const img = document.createElement('img');
   img.src = 'https:' + imageAsset.fields.file.url;
-  img.style.width = '320px';
+  img.style.width = '300px';
+  img.style.transition = 'transform 0.3s ease';
 
-
-  // Check if item is already in cart (saved from localStorage) and apply opacity
   if (cartItems.includes(name)) {
     img.style.filter = 'opacity(60%)';
-    // img.style.boxShadow = '0 0 0px 4px rgb(117, 241, 132)';
-
   }
 
-  // Click add/remove from cart
-  img.addEventListener('click', () => {
-    if (img.style.filter === 'opacity(60%)') {
-      img.style.filter = 'none';
-      img.style.boxShadow = 'none';
+  // Hover Buttons
+  const buttonsContainer = document.createElement('div');
+  buttonsContainer.style.position = 'absolute';
+  buttonsContainer.style.top = '0';
+  buttonsContainer.style.left = '0';
+  buttonsContainer.style.width = '100%';
+  buttonsContainer.style.height = '100%';
+  buttonsContainer.style.display = 'flex';
+  buttonsContainer.style.flexDirection = 'column';
+  buttonsContainer.style.justifyContent = 'center';
+  buttonsContainer.style.alignItems = 'center';
+  buttonsContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+  buttonsContainer.style.opacity = '0';
+  buttonsContainer.style.transition = 'opacity 0.3s ease';
 
-      // Ensure cartCount does not go below zero
-      if (cartCount > 0) {
-        cartCount--;
-      }
-      cartItems = cartItems.filter(item => item !== name); // Remove image name from cart
-    }
-    else {
-      img.style.filter = 'opacity(60%)';
-      cartCount++;
-      // img.style.boxShadow = '0 0 0px 4px rgb(117, 241, 132)';
-      cartItems.push(name); // Add image name to cart
-    }
-    // Update the cart count text and save to localStorage
-    cartCountText.textContent = ` ${cartCount}`;
-    saveCartToLocalStorage();
-
-    // Hide cart when an item is added or removed
-    isCartVisible = false;
-    cartListDisplay.innerHTML = '';
-
+  imgContainer.addEventListener('mouseenter', () => {
+    buttonsContainer.style.opacity = '1';
+  });
+  imgContainer.addEventListener('mouseleave', () => {
+    buttonsContainer.style.opacity = '0';
   });
 
+  const addToCartButton = document.createElement('button');
+  addToCartButton.textContent = cartItems.includes(name) ? 'Remove from Cart' : 'Add to Cart';
+  styleHoverButton(addToCartButton);
 
-  // Display image name
+  addToCartButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (cartItems.includes(name)) {
+      img.style.filter = 'none';
+      cartItems = cartItems.filter(item => item !== name);
+      cartCount = Math.max(0, cartCount - 1);
+      addToCartButton.textContent = 'Add to Cart';
+    } else {
+      img.style.filter = 'opacity(60%)';
+      cartItems.push(name);
+      cartCount++;
+      addToCartButton.textContent = 'Remove from Cart';
+    }
+    cartCountText.textContent = ` ${cartCount}`;
+    saveCartToLocalStorage();
+    isCartVisible = false;
+    cartListDisplay.innerHTML = '';
+  });
+
+  const zoomButton = document.createElement('button');
+  zoomButton.textContent = 'Zoom In';
+  styleHoverButton(zoomButton);
+  zoomButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openZoomModal(img.src, name);
+  });
+
+  buttonsContainer.appendChild(addToCartButton);
+  buttonsContainer.appendChild(zoomButton);
+
   const caption = document.createElement('span');
   caption.textContent = name;
   caption.style.display = 'block';
@@ -163,23 +180,45 @@ const ImageName = (container, imageAsset, name) => {
   caption.style.fontSize = '8pt';
 
   imgContainer.appendChild(img);
+  imgContainer.appendChild(buttonsContainer);
   imgContainer.appendChild(caption);
   container.appendChild(imgContainer);
 };
 
+// Button style helper
+function styleHoverButton(button) {
+  button.style.margin = '5px';
+  button.style.padding = '8px 16px';
+  button.style.fontSize = '12px';
+  button.style.border = 'none';
+  button.style.borderRadius = '4px';
+  button.style.cursor = 'pointer';
+  button.style.backgroundColor = '#ffffff';
+  button.style.color = '#333';
+  button.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
+}
+
+// Zoom Modal
+function openZoomModal(src, alt) {
+  const modal = document.getElementById('zoomModal');
+  const zoomedImage = document.getElementById('zoomedImage');
+  zoomedImage.src = src;
+  zoomedImage.alt = alt;
+  modal.style.display = 'flex';
+}
+
+document.getElementById('zoomModal').addEventListener('click', () => {
+  document.getElementById('zoomModal').style.display = 'none';
+});
+
 // Reset Cart
 const resetCartButton = document.getElementById('resetCartButton');
 resetCartButton.addEventListener('click', () => {
-  // Clear cart items and count
   cartCount = 0;
   cartItems = [];
   cartCountText.textContent = ` ${cartCount}`;
-
-  // Save the empty cart to localStorage
   saveCartToLocalStorage();
-
-  // Reset image opacities
-  const images = document.querySelectorAll('#SleepyHollow_content img, #Bristol_content img, #Rehearsal_content img, #FunnyFam_content img, #Weppler_content img, #Larson_content img, #Kelly_content img');
+  const images = document.querySelectorAll('#SleepyHollow_content img, #Bristol_content img, #Rehearsal_content img, #FunnyFam_content img, #Weppler_content img, #Larson_content img, #Kelly_content img, #Maddy_content img');
   images.forEach(img => {
     img.style.filter = 'none';
   });
@@ -187,13 +226,13 @@ resetCartButton.addEventListener('click', () => {
   isCartVisible = false;
 });
 
-
-// Call DisplayImages for fields
+// Display images from Contentful fields
 DisplayImages('SleepyHollow_content', 'sleepyHollow');
 DisplayImages('Bristol_content', 'bristol_id');
 DisplayImages('Rehearsal_content', 'RehearsalDinner');
 DisplayImages('FunnyFam_content', 'FunnyFamPhoto');
 DisplayImages('Weppler_content', 'weppler');
 DisplayImages('Larson_content', 'larsonFamily');
-DisplayImages('Kelly_content', 'Kelly')
-DisplayImages('Nalven_content', 'nalven')
+DisplayImages('Kelly_content', 'Kelly');
+DisplayImages('Nalven_content', 'nalven');
+DisplayImages('Maddy_content', 'maddySeniorPhotos');
