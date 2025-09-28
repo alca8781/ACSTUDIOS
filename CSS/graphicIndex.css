@@ -1,3 +1,7 @@
+html {
+    background-color: rgb(27, 27, 27);
+}
+
 @media(min-width:1300px) {
     html {
         max-width: 1200px;
@@ -10,6 +14,7 @@
         width: 300px;
         text-align: center;
         align-items: center;
+        padding: 20px;
     }
 
     .sr-only {
@@ -24,15 +29,12 @@
         width: 1px;
     }
 
-
     nav {
         padding: .5em;
         display: flex;
         justify-content: space-evenly;
         position: sticky;
         top: 0;
-        background-color: white;
-
     }
 
     nav ul {
@@ -43,7 +45,7 @@
     }
 
     nav a {
-        color: rgb(79, 94, 125);
+        color: rgb(255, 255, 255);
         text-decoration: none;
         padding: .2em .5em;
         margin: 0 20pt;
@@ -61,19 +63,19 @@
     }
 
     nav ul li a:hover {
-        color: #6d8291;
-        border-bottom: 2px solid rgb(79, 94, 125);
-
+        color: #bfbfbf;
+        border-bottom: 2px solid #fbb831;
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #b1b1b3;
+        background-color: #fbb831;
         min-width: 260px;
         box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
         padding: 5px;
         border-radius: 10px;
+        
     }
 
     li.dropdown {
@@ -86,13 +88,13 @@
 
     .dropdown-content a {
         font-size: 12pt;
-        color: white;
+        color: rgb(0, 0, 0);
         text-decoration: none;
         display: block;
     }
 
     .dropdown-content a:hover {
-        color: rgb(79, 94, 125);
+        color: rgb(255, 255, 255);
         border-bottom: none;
     }
 
@@ -100,14 +102,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
-
     }
 
     #instagram-button {
         background: none;
         border: none;
-        padding: 0;
+        padding: 10;
         margin: 0;
     }
 
@@ -124,9 +124,8 @@
     footer {
         font-size: x-small;
         text-align: center;
-        color: rgb(79, 87, 104);
+        color: rgb(255, 255, 255);
         padding: 10px;
-        background-color: white;
         margin-top: auto;
         width: 100%;
     }
@@ -169,16 +168,14 @@
         margin-bottom: 30px;
     }
 
-    button {
+    .centerImg button {
         background-color: #fbb831;
         color: rgb(0, 0, 0);
         padding: 2px 10px 2px 10px;
         margin: 15px 10px 15px 10px;
         border-radius: 8px;
         font-size: 12pt;
-    }
-
-     .centerImg button {
+   
         display: block;
         margin: auto;
         width: 8%;
@@ -194,7 +191,7 @@
     }
 
     .headerLogo img {
-        width: 100px;
+        width: 200px;
     }
 
     .sr-only {
@@ -216,8 +213,6 @@
         justify-content: space-evenly;
         position: sticky;
         top: 0;
-        background-color: white;
-
     }
 
     nav ul {
@@ -228,9 +223,8 @@
     }
 
     nav a {
-        color: rgb(79, 94, 125);
+        color: rgb(255, 255, 255);
         text-decoration: none;
-        /* padding: .2em .5em; */
         margin: 0 2pt;
         text-align: left;
     }
@@ -240,22 +234,21 @@
         font-optical-sizing: auto;
         font-weight: 300;
         font-style: normal;
-        padding: 8px;
-        font-size: 12pt;
+        padding: 12px;
+        font-size: 14pt;
         line-height: 1.5em;
     }
 
     nav ul li a:hover {
-        color: #acacac;
-        /* border-bottom: 2px solid rgb(79, 94, 125);
-         */
+     color: #bfbfbf;
+        border-bottom: 2px solid #fbb831;
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #b1b1b3;
-        min-width: 160px;
+        background-color: #fbb831;
+        min-width: 200px;
         box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
         padding: 2px;
         border-radius: 10px;
@@ -270,15 +263,14 @@
     }
 
     .dropdown-content a {
-        font-size: 8pt;
-        color: white;
+        font-size: 11pt;
+        color: rgb(0, 0, 0);
         text-decoration: none;
         display: block;
     }
 
     .dropdown-content a:hover {
-        color: rgb(79, 94, 125);
-        border-bottom: none;
+        color: rgb(144, 142, 142);
     }
 
     .social {
@@ -311,7 +303,6 @@
         text-align: center;
         color: rgb(79, 87, 104);
         padding: 10px;
-        background-color: white;
         margin-top: auto;
         width: 100%;
     }
@@ -333,22 +324,6 @@
         font-family: "Raleway", sans-serif;
         font-optical-sizing: auto;
         font-weight: 300;
-    }
-
-    .button-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 10px;
-    }
-
-    .button-row button {
-        flex: 1 1 auto;
-        font-size: 8pt;
-        padding: 6px;
-        min-width: 160px;
-        max-width: 10px;
     }
 
     .centerImages p {
@@ -386,6 +361,19 @@
         height: auto;
         padding: 10px;
     }
+
+    footer {
+    font-size: x-small;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+    color: rgb(79, 87, 104);
+}
+
+.copyright {
+    color: white;
+}
 }
 
 @media only screen and (max-width: 799px) {
@@ -395,7 +383,8 @@
     }
 
     .headerLogo img {
-        width: 100px;
+        width: 150px;
+        padding: 20px;
     }
 
     .sr-only {
@@ -417,8 +406,6 @@
         justify-content: space-evenly;
         position: sticky;
         top: 0;
-        background-color: white;
-
     }
 
     nav ul {
@@ -429,9 +416,8 @@
     }
 
     nav a {
-        color: rgb(79, 94, 125);
+        color: rgb(255, 255, 255);
         text-decoration: none;
-        /* padding: .2em .5em; */
         margin: 0 2pt;
         text-align: left;
     }
@@ -447,15 +433,14 @@
     }
 
     nav ul li a:hover {
-        color: #acacac;
-        /* border-bottom: 2px solid rgb(79, 94, 125);
-         */
+       color: #bfbfbf;
+        border-bottom: 2px solid #fbb831;
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #b1b1b3;
+        background-color: #fbb831;
         min-width: 160px;
         box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
         padding: 2px;
@@ -472,13 +457,13 @@
 
     .dropdown-content a {
         font-size: 8pt;
-        color: white;
+        color: rgb(0, 0, 0);
         text-decoration: none;
         display: block;
     }
 
     .dropdown-content a:hover {
-        color: rgb(79, 94, 125);
+         color: rgb(255, 255, 255);
         border-bottom: none;
     }
 
@@ -510,9 +495,8 @@
     footer {
         font-size: x-small;
         text-align: center;
-        color: rgb(79, 87, 104);
+        color: rgb(255, 255, 255);
         padding: 10px;
-        background-color: white;
         margin-top: auto;
         width: 100%;
     }

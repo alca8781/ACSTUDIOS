@@ -11,11 +11,9 @@
     }
 
     .displayPortfolio {
-
         text-align: left;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 40px;
         padding: 30px;
     }
 
@@ -24,10 +22,16 @@
         width: auto;
     }
 
-    article p img {
-        width: 100%;
-        height: auto;
+     p img {
+        width: auto;
+        height: 150px;
         padding-top: 25px;
+        padding-left: 0pt;
+        margin-left: 0pt;
+    }
+
+    article p{
+        padding: 20px;
     }
 
     .centerImg img {
@@ -66,7 +70,7 @@
     }
 
     .displayPortfolio p {
-        margin: 10px;
+        margin: 20px;
         font-size: 11pt;
     }
 
@@ -126,9 +130,7 @@
     }
 
     .displayPortfolio {
-
         padding: 10px;
-
     }
 
 
