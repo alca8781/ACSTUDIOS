@@ -1,3 +1,96 @@
+ /* Enhanced article animations */
+        article {
+            animation: slideInUp 0.8s ease;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Parallax effect for images */
+        .displayPortfolio img {
+            transition: transform 0.5s ease;
+        }
+
+        /* Enhanced button */
+        .centerImg button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .centerImg button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .centerImg button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .centerImg button:hover {
+            transform: translateY(-3px);
+  
+        }
+
+        /* Text reveal animation */
+        .displayPortfolio p {
+            opacity: 0;
+            animation: fadeInText 1s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Credit tag enhancement */
+        #CreditTag {
+            position: relative;
+        }
+
+        #CreditTag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            animation: expandLine 1s ease forwards;
+        }
+
+        @keyframes expandLine {
+            from {
+                width: 0;
+            }
+            to {
+                width: 60px;
+            }
+        }
+
 @media(min-width:1300px) {
 
     .centerImages p {
