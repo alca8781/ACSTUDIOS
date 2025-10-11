@@ -18,7 +18,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        background-color: rgb(79, 87, 104);
+        /* background-color: rgb(79, 87, 104); */
+        background-color:  rgb(27, 27, 27);
         margin-top: 10pt;
     }
     
@@ -28,7 +29,7 @@
     }
     #HP .no1 img {
         padding: 20px;
-        height: 200px;
+        height: 350px;
         width: auto;
         max-width: 100%;
     }
@@ -291,4 +292,74 @@
             color: white;
             font-size: 16pt;
         }
+        }
+
+/* Button Row */
+        .button-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-family: "Raleway", sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, rgb(79, 94, 125), rgb(79, 87, 104));
+            color: white;
+            box-shadow: 0 5px 20px rgba(79, 87, 104, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(79, 87, 104, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: rgb(79, 94, 125);
+            transform: translateY(-3px);
         }

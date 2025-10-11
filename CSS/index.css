@@ -42,6 +42,7 @@
 
   nav a {
       color: rgb(79, 94, 125);
+      
       text-decoration: none;
       padding: .2em .5em;
       margin: 0 20pt;
@@ -148,11 +149,11 @@ li.dropdown:hover .dropdown-content {
       font-weight: 300;
   }
   
-  button{
+  /* button{
     padding: 8px 8px 8px 8px;
     border-radius: 8px;
     
-  }
+  } */
   
 }
 
@@ -305,11 +306,11 @@ li.dropdown:hover .dropdown-content {
       font-weight: 300;
   }
   
-  button{
+  /* button{
     padding: 8px 8px 8px 8px;
     border-radius: 8px;
     
-  }
+  } */
 } 
 
 @media(max-width:799px) {
@@ -460,7 +461,7 @@ li.dropdown:hover .dropdown-content {
         font-weight: 300;
     }
     
-   .button-row {
+   /* .button-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -474,7 +475,7 @@ li.dropdown:hover .dropdown-content {
     padding: 6px;
     min-width: 160px;
     max-width: 10px;
-}
+} */
   
 }
   
