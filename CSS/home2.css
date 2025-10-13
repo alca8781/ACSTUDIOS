@@ -41,7 +41,11 @@ h1 {
      color: white;
      overflow-x: hidden;
  }
-
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 /* === Navigation === */
     nav {
     padding: .5em;
@@ -62,6 +66,8 @@ h1 {
     padding: 5px;
     border-radius: 10px;
     z-index: 1100;
+    top: 100%;
+  left: 0;
 }
 
 
@@ -545,6 +551,7 @@ aside img:hover {
      .dropdown-content {
          display: none;
          position: absolute;
+
          min-width: 120px;
          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
          padding: 3px;
