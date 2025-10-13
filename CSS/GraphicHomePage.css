@@ -313,24 +313,7 @@ article {
     transform: translateY(0);
 }
 
-/* === Custom Cursor === */
-.cursor-follow {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border: 2px solid rgba(251, 184, 49, 0.6);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: all 0.15s ease;
-    z-index: 9999;
-}
 
-.cursor-follow.hover {
-    width: 40px;
-    height: 40px;
-    background: rgba(251, 184, 49, 0.2);
-}
 
 /* === Responsive Layout === */
 @media only screen and (max-width: 799px) {
