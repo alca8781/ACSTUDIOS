@@ -1,16 +1,16 @@
  .sr-only {
-         border: 0;
-         clip: rect(0, 0, 0, 0);
-         height: 1px;
-         margin: -1px;
-         overflow: hidden;
-         padding: 0;
-         position: absolute;
-         white-space: nowrap;
-         width: 1px;
-     }
+     border: 0;
+     clip: rect(0, 0, 0, 0);
+     height: 1px;
+     margin: -1px;
+     overflow: hidden;
+     padding: 0;
+     position: absolute;
+     white-space: nowrap;
+     width: 1px;
+ }
 
-h1 {
+ h1 {
      font-family: "Rozha One", serif;
      font-weight: 400;
      font-style: normal;
@@ -41,168 +41,170 @@ h1 {
      color: white;
      overflow-x: hidden;
  }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-/* === Navigation === */
-    nav {
-    padding: .5em;
-    display: flex;
-    justify-content: space-evenly;
-    position: sticky;  /* already set */
-    top: 0;
-    background-color: rgb(27, 27, 27); /* Ensure it's not transparent */
-    z-index: 1000;  /* Add this */
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fbb831;
-    min-width: 260px;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
-    padding: 5px;
-    border-radius: 10px;
-    z-index: 1100;
-    top: 100%;
-  left: 0;
-}
+ header {
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+ }
+
+ /* === Navigation === */
+ nav {
+     padding: .5em;
+     display: flex;
+     justify-content: space-evenly;
+     position: sticky;
+     top: 0;
+     background-color: rgb(27, 27, 27);
+     z-index: 1000;
+ }
+
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #fbb831;
+     min-width: 260px;
+     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+     padding: 5px;
+     border-radius: 10px;
+     z-index: 1100;
+     top: 100%;
+     left: 0;
+ }
 
 
 
-    nav ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-    }
+ nav ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     display: flex;
+ }
 
-    nav a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        padding: .2em .5em;
-        margin: 0 20pt;
-        text-align: left;
-    }
+ nav a {
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     padding: .2em .5em;
+     margin: 0 20pt;
+     text-align: left;
+ }
 
-    a {
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        padding: 10px;
-        font-size: 15pt;
-        line-height: 1.5em;
-    }
+ a {
+     font-family: "Raleway", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 300;
+     font-style: normal;
+     padding: 10px;
+     font-size: 15pt;
+     line-height: 1.5em;
+ }
 
-    nav ul li a:hover {
-        color: #bfbfbf;
-        border-bottom: 2px solid #fbb831;
-    }
+ nav ul li a:hover {
+     color: #bfbfbf;
+     border-bottom: 2px solid #fbb831;
+ }
 
-   
-    li.dropdown {
-        position: relative;
-    }
 
-    li.dropdown:hover .dropdown-content {
-        display: block;
-    }
+ li.dropdown {
+     position: relative;
+ }
 
-    .dropdown-content a {
-        font-size: 12pt;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        display: block;
-    }
+ li.dropdown:hover .dropdown-content {
+     display: block;
+ }
 
-    .dropdown-content a:hover {
-        color: rgb(255, 255, 255);
-        border-bottom: none;
-    }
+ .dropdown-content a {
+     font-size: 12pt;
+     color: rgb(0, 0, 0);
+     text-decoration: none;
+     display: block;
+ }
 
-     .social {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         padding: 20px;
-     }
+ .dropdown-content a:hover {
+     color: rgb(255, 255, 255);
+     border-bottom: none;
+ }
 
-     #instagram-button {
-         background: none;
-         border: none;
-         padding: 0;
-         margin: 0;
-     }
+ .social {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+ }
 
-     #instagram-logo {
-         width: 30px;
-         height: auto;
-         transition: transform 0.3s;
-     }
+ #instagram-button {
+     background: none;
+     border: none;
+     padding: 0;
+     margin: 0;
+ }
 
-     #instagram-button:hover #instagram-logo {
-         transform: scale(1.1) rotate(5deg);
-     }
+ #instagram-logo {
+     width: 30px;
+     height: auto;
+     transition: transform 0.3s;
+ }
 
-     footer {
-         font-size: x-small;
-         text-align: center;
-         color: rgb(255, 255, 255);
-         padding: 10px;
-         background-color: white;
-         margin-top: 100pt;
-         width: 100%;
+ #instagram-button:hover #instagram-logo {
+     transform: scale(1.1) rotate(5deg);
+ }
 
-              text-align: center;
+ footer {
+     font-size: x-small;
+     text-align: center;
+     color: rgb(255, 255, 255);
+     padding: 10px;
+     background-color: white;
+     margin-top: 100pt;
+     width: 100%;
+
+     text-align: center;
      padding: 3rem 2rem;
      background: rgba(0, 0, 0, 0.3);
      backdrop-filter: blur(10px);
 
-     }
+ }
 
  /* Scroll progress bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #fbb831 0%, #f5a623 100%);
-            width: 0%;
-            z-index: 9999;
-            transition: width 0.1s ease;
-        }
+ .progress-bar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 4px;
+     background: linear-gradient(90deg, #fbb831 0%, #f5a623 100%);
+     width: 0%;
+     z-index: 9999;
+     transition: width 0.1s ease;
+ }
 
  /* Animated Background */
-aside {
-  position: relative; 
-  float: left; 
-  width: 250px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 2rem;
-  margin-right: 2rem;
-  backdrop-filter: blur(4px);
-  margin-left: 20pt;
-}
+ aside {
+     position: relative;
+     float: left;
+     width: 250px;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+     padding-top: 2rem;
+     margin-right: 2rem;
+     backdrop-filter: blur(4px);
+     margin-left: 20pt;
+ }
 
-aside img {
-  width: 250px;
-  height: auto;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 70%;
-}
+ aside img {
+     width: 250px;
+     height: auto;
+     margin-bottom: 1rem;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     opacity: 70%;
+ }
 
-aside img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-}
+ aside img:hover {
+     transform: scale(1.1);
+     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+ }
 
 
  .bg-animation {
@@ -253,7 +255,7 @@ aside img:hover {
      animation: fadeInScale 1s ease-out;
      text-align: center;
      margin-bottom: 120px;
-    margin-top: 70px;
+     margin-top: 70px;
  }
 
  @keyframes fadeInScale {
@@ -328,11 +330,11 @@ aside img:hover {
      max-width: 1000px;
      margin: 0 auto;
      display: flex;
-  justify-content: center;
-  align-items: center;
+     justify-content: center;
+     align-items: center;
 
 
-  text-align: center;
+     text-align: center;
 
  }
 
@@ -360,9 +362,9 @@ aside img:hover {
 
  .about-images img {
      width: 100%;
-     height:auto;
-     object-fit:cover;
-   
+     height: auto;
+     object-fit: cover;
+
      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
      transition: transform 0.4s ease, box-shadow 0.4s ease;
  }
@@ -503,18 +505,19 @@ aside img:hover {
          text-align: center;
      }
 
-     aside{
-        display: none;
+     aside {
+         display: none;
      }
 
-       nav {
+     nav {
          padding: 8px;
          display: flex;
          justify-content: space-evenly;
          position: sticky;
          top: 0;
          margin-top: 30px;
-    z-index: 1000;  /* Add this */
+         z-index: 1000;
+         /* Add this */
      }
 
      nav ul {
@@ -580,35 +583,36 @@ aside img:hover {
      }
  }
 
-  @media (min-width: 800px) and (max-width: 1299px) {
+ @media (min-width: 800px) and (max-width: 1299px) {
      aside {
-  position: relative; 
-  float: left; 
-  width: 200px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 2rem;
-  margin-right: 2rem;
-  backdrop-filter: blur(4px);
-  margin-left: 20pt;
-}
+         position: relative;
+         float: left;
+         width: 200px;
+         height: auto;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-start;
+         padding-top: 2rem;
+         margin-right: 2rem;
+         backdrop-filter: blur(4px);
+         margin-left: 20pt;
+     }
 
-aside img {
-  width: 200px;
-  height: auto;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 70%;
-}
+     aside img {
+         width: 200px;
+         height: auto;
+         margin-bottom: 1rem;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         opacity: 70%;
+     }
 
-aside img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-}
-  nav {
+     aside img:hover {
+         transform: scale(1.1);
+         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+     }
+
+     nav {
          padding: .5em;
          display: flex;
          justify-content: space-evenly;
@@ -677,4 +681,4 @@ aside img:hover {
          color: rgb(79, 94, 125);
          border-bottom: none;
      }
-    }
+ }

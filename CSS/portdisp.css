@@ -94,6 +94,94 @@
      }
  }
 
+ /* Typing effect base style */
+.typewriter h3 {
+  color:  rgb(239, 206, 19);
+  font-size: 3.5rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 0.1em;
+  display: inline-block;
+
+  animation: none; 
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  border-right: 8px solid rgb(239, 206, 19);
+  width: 0;
+
+  opacity: 1;
+
+  margin-left: 20px;
+  margin-bottom: 10px ;
+  
+}
+
+.typewriter {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.typewriter.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: var(--chars); }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.divider {
+  border: none;
+  border-top: 6px solid rgb(239, 206, 19);
+  width: 100%;                  /* Shrinks with screen */
+  max-width: 100%;
+  margin: 40px auto;           /* Centers the line */
+}
+
+.dividertwo{
+    border: none;
+  border-top: 3px solid rgb(255, 255, 255);
+  width: 90%;                  /* Shrinks with screen */
+  max-width: 100%;
+  margin: 10px auto; 
+}
+
+@media only screen and (max-width: 799px) {
+  .typewriter h3 {
+  color:  rgb(239, 206, 19);
+  /* font-family: monospace; */
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(239, 206, 19);
+  letter-spacing: 0.1em;
+  display: inline-block;
+  width: 0ch;
+  animation: none; 
+
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+ 
+}
+}
+
  @media(min-width:1300px) {
 
      .centerImages p {
@@ -158,6 +246,7 @@
          height: 500px;
          text-align: center;
      }
+
     }
 
      @media (min-width: 800px) and (max-width: 1299px) {
